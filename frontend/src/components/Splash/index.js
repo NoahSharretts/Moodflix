@@ -5,10 +5,10 @@ const Splash = () => {
     return (
         <>
           <div className="main-div">
-          <h1 className = "splash-main-header"> NEWCORD! STAY IN TOUCH </h1>
-          <h2 className ="splash-sub-header"> A SITE THAT MAKES IT EASY TO TALK EVERY DAY AND HANG OUT MORE OFTEN</h2>
+          <h1 className = "splash-main-header"> Moodflix </h1>
+          <h2 className ="splash-sub-header"> Why not review media with more media? </h2>
           <button className="splash-button">
-          <Link to="/login" className="open">Open Newcord</Link>
+          <Link to="/login" className="open">Open Moodflix</Link>
           </button>
           </div>
         </>
