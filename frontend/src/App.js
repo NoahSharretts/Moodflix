@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import SignupFormPage from './components/SignupFormPage';
 import LoginFormPage from "./components/LoginFormPage";
 import Splash from './components/Splash';
+import Home from './components/Home';
 import * as sessionActions from './store/session';
 import Navigation from './components/Navigation';
 import { Modal } from './context/Modal';
 function App() {
+  const sessionUser = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -21,7 +23,7 @@ function App() {
       {isLoaded && (
         <Switch>
           <Route exact path="/">
-            <Splash />
+          { sessionUser? <Home />: <Splash /> }
           </Route>
           <Route exact path="/login" >
             <LoginFormPage />
