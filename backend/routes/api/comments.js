@@ -10,13 +10,13 @@ const { singleMulterUpload } = require("../../awsS3");
 const router = express.Router();
 
 // Does requireAuth replace this?
-const checkPermissions = (post, currentUser) => {
-  if (post.userId !== currentUser.id) {
-    const err = new Error('Illegal operation.');
-    err.status = 403;
-    throw err;
-  }
-};
+// const checkPermissions = (post, currentUser) => {
+//   if (post.userId !== currentUser.id) {
+//     const err = new Error('Illegal operation.');
+//     err.status = 403;
+//     throw err;
+//   }
+// };
 
 
 const commentValidators = [
